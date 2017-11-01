@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources/>
+	
+	<form-beans>
+		<form-bean name="managerForm" type="com.wgh.actionForm.ManagerForm" />
+		<form-bean name="customerForm" type="com.wgh.actionForm.CustomerForm" />
+		<form-bean name="personnelForm" type="com.wgh.actionForm.PersonnelForm" />
+		<form-bean name="infoTypeForm" type="com.wgh.actionForm.InfoTypeForm" />
+		<form-bean name="shortInfoForm" type="com.wgh.actionForm.ShortInfoForm" />
+		<form-bean name="parameterForm" type="com.wgh.actionForm.ParameterForm" />
+		<form-bean name="sendMailForm" type="com.wgh.actionForm.SendMailForm" />
+		<form-bean name="sendLetterForm" type="com.wgh.actionForm.SendLetterForm" />
+	</form-beans>
+	<action-mapping>
+	<!-- 管理员 -->
+		<action name="managerForm" path="/manager" scope="request" type="com.wgh.action.Manager" validate="true">
+			<forward name="managerLoginof" path="/main.jsp">
+		<forward name="managerQuery" path="/manager.jsp">
+		<forward name="managerAdd" path="/manager_ok.jsp?para=1"/>
+		<forward name="pwdQueryModify" path="/pwd_Modify.jsp">
+		<forward name="pwdModify" path="/pwd_ok.jsp">
+	.............................
+		</action-mappings>
+	</struts-config>>
+		
